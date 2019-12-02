@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "clean-css": "^4.2.0",
-    "constantinople": "^3.1.2",
+    "constantinople": "^4.0.0",
     "gitalk": "^1.5.0",
     "hexo": "^3.9.0",
     "hexo-generator-archive": "^0.1.5",
@@ -23,6 +23,8 @@
     "hexo-renderer-stylus": "^0.3.3",
     "hexo-server": "^0.3.3",
     "hexo-wordcount": "^6.0.1",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0",
     "uglify-js": "^2.6.1"
   }
 }

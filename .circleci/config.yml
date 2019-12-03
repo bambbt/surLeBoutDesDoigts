@@ -6,6 +6,7 @@ jobs:
     resource_class: medium
     steps:
       - run: |
+          npm install hexo-cli -g
           npm install
           hexo generate
 workflows:
@@ -13,4 +14,3 @@ workflows:
   build:
     jobs:
       - build
-      

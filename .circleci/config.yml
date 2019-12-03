@@ -5,8 +5,9 @@ jobs:
     machine: true
     resource_class: medium
     steps:
-      - run:
-          command: npm install
+      - run: |
+          npm install
+          hexo generate
 workflows:
   version: 2
   build:

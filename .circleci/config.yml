@@ -6,7 +6,6 @@ jobs:
     resource_class: medium
     steps:
       - run:
-          shell: /bin/sh
           command: npm install
 workflows:
   build:

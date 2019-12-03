@@ -1,0 +1,16 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/surLeBoutDesDoigts
+    machine: true
+    resource_class: medium
+    steps:
+      - run:
+          shell: /bin/sh
+          command: npm install
+
+workflows:
+  build:
+    jobs:
+      - build
+      

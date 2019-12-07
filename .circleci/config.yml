@@ -10,7 +10,7 @@ jobs:
       - checkout
 
       - run: |
-          npm install hexo-cli -g
+          npm install hexo-cli
           npm install
           hexo generate
 

@@ -1,10 +1,9 @@
 ---
 title: SSL HandShake & Keystore and Trustore
 date: 2019-11-30 23:20:06
-tags: [SSL,Server,Client]
+tags: [Apache, Server, Client]
 categories:
-- [SSL,HTTPs]
-date: 2019-10-24 22:45:42
+ - [SSL, HTTPs]
 cover: https://surleboutdesdoigts.me/img/https_SSL_cover.png
 ---
 

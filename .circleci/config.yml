@@ -10,6 +10,10 @@ jobs:
       - checkout
 
       - run: |
+          nvm install 10.16.3
+          npm install npm@6.4.0 -g
+
+      - run: |
           npm install hexo-cli -g
           npm install
 

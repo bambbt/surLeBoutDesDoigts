@@ -10,7 +10,6 @@ jobs:
       - checkout
 
       - run: |
-          nvm use 10.16.3
           npm install npm@6.4.0 -g
 
       - run: |

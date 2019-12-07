@@ -13,10 +13,10 @@ jobs:
           name: install node@10.16.3
           command: |
                set +e         
-               touch $BASH_ENV    
-               curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
-               echo 'export NVM_DIR="$HOME/.nvm"' >> $BASH_ENV
-               echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> $BASH_ENV
+               #touch $BASH_ENV    
+               #curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+               #echo 'export NVM_DIR="$HOME/.nvm"' >> $BASH_ENV
+               #echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> $BASH_ENV
                echo 'nvm install v10.16.3' >> $BASH_ENV
                echo 'nvm alias default v10.16.3' >> $BASH_ENV
 

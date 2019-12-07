@@ -10,7 +10,7 @@ jobs:
       - checkout
 
       - run: 
-          name: install node@10.16.3 and verify version
+          name: install node@10.16.3
           command: |
                set +e         
                touch $BASH_ENV    
@@ -19,12 +19,16 @@ jobs:
                echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> $BASH_ENV
                echo 'nvm install v10.16.3' >> $BASH_ENV
                echo 'nvm alias default v10.16.3' >> $BASH_ENV
-               node --version
 
       - run: 
-          name: install npm@6.4.0 and verify version
+          name: install npm@6.4.0
           command: |
                npm install npm@6.4.0 -g
+
+      - run:
+          name: verify node version and npm version
+          command: |
+               node --version
                npm --version
 
       - run:
@@ -38,7 +42,6 @@ jobs:
           command: |
               hexo clean
               hexo generate
-
 
 workflows:
   version: 2

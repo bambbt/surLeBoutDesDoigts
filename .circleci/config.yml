@@ -23,9 +23,9 @@ jobs:
 
       - run: 
           name: install npm@6.4.0 and verify version
-          commnad: |
-          npm install npm@6.4.0 -g
-          npm --version
+          command: |
+               npm install npm@6.4.0 -g
+               npm --version
 
       - run:
           name: install hexo-cli and node modules from package.json

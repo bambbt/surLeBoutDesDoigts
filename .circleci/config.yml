@@ -3,11 +3,20 @@ jobs:
   build:
     machine:
       image: ubuntu-1604:201903-01
+
+
+
+     working_directory: ~/surleboutdesdoigts.me
+
     steps:
+      - checkout
+
       - run: |
           npm install hexo-cli -g
           npm install
           hexo generate
+
+
 workflows:
   version: 2
   build:

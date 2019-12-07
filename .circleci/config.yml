@@ -1,8 +1,8 @@
 version: 2
 jobs:
   build:
-    working_directory: ./
-    resource_class: medium
+    machine:
+      image: ubuntu-1604:201903-01
     steps:
       - run: |
           npm install hexo-cli -g

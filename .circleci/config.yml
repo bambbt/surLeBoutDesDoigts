@@ -1,8 +1,7 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/surLeBoutDesDoigts
-    machine: true
+    working_directory: ./
     resource_class: medium
     steps:
       - run: |

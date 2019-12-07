@@ -10,9 +10,9 @@ jobs:
       - checkout
 
       - run: |
-          sudo npm cache clean -f
-          sudo npm install -g n
-          sudo n 10.16.3
+          npm cache clean -f
+          npm install -g n
+          n 10.16.3
           npm install npm@6.4.0 -g
 
       - run: |

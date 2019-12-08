@@ -1,8 +1,11 @@
 version: 2
-jobs:
-  build:
+executors:
+  my-executor:
     machine:
       image: ubuntu-1604:201903-01
+jobs:
+  build:
+    executor: my-executor
     working_directory: ~/surleboutdesdoigts
 
     steps:
@@ -50,8 +53,9 @@ jobs:
               ls -l surleboutdesdoigts_v$(cat version).tar.gz
 
   deploy:
-    machine:
-      enabled: true
+    executor: my-executor
+    working_directory: ~/surleboutdesdoigts
+
     steps:
       - run:
           name: stage artifact
@@ -61,7 +65,7 @@ jobs:
       - run:
           name: deploy staged artifact
           command: |
-              ssh $SSH_USER@$SSH_HOST "./deploy_surleboutdesdoigts.sh"
+              ssh $SSH_USER@$SSH_HOST "./publish_surleboutdesdoigts.sh"
 
 workflows:
   version: 2

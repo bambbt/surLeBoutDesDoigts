@@ -43,6 +43,12 @@ jobs:
               hexo clean
               hexo generate
 
+      - run:
+          name: compress artifact
+          command: |
+              tar -zxvf surleboutdesdoigts_v$(cat version).tar.gz ./public
+              ls -l
+
 workflows:
   version: 2
   build:

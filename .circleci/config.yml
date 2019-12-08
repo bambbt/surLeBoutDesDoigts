@@ -1,12 +1,10 @@
 version: 2.1
 executors:
-  vm:  
-    machine:
-      - image: ubuntu-1604:201903-01
+  machine:
+    - image: ubuntu-1604:201903-01
     
 jobs:
   build:
-    executor: "vm"
 
     working_directory: ~/surleboutdesdoigts
 
@@ -54,7 +52,6 @@ jobs:
               ls -l surleboutdesdoigts_v$(cat version).tar.gz
 
   deploy:
-    executor: "vm"
 
     working_directory: ~/surleboutdesdoigts
 

@@ -1,12 +1,11 @@
 version: 2.1
 executors:
-  my-executor:
     machine:
       - image: ubuntu-1604:201903-01
-    working_directory: ~/surleboutdesdoigts
+    
 jobs:
   build:
-    executor: my-executor
+    working_directory: ~/surleboutdesdoigts
 
     steps:
       - checkout
@@ -52,7 +51,8 @@ jobs:
               ls -l surleboutdesdoigts_v$(cat version).tar.gz
 
   deploy:
-    executor: my-executor
+
+    working_directory: ~/surleboutdesdoigts
 
     steps:
       - run:

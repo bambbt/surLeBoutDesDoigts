@@ -46,7 +46,7 @@ jobs:
       - run:
           name: compress artifact
           command: |
-              tar -zxvf surleboutdesdoigts_v$(cat version).tar.gz ./public
+              tar -zxvf surleboutdesdoigts_v$(cat version).tar.gz public
               ls -l
 
 workflows:

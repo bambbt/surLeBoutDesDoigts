@@ -3,15 +3,14 @@ executors:
   my-executor:
     machine:
       - image: ubuntu-1604:201903-01
+    working_directory: ~/surleboutdesdoigts
 jobs:
   build:
     executor: my-executor
-    working_directory: ~/surleboutdesdoigts
 
     steps:
-
       - checkout
-
+      
       - run: 
           name: install node@10.16.3
           command: |
@@ -54,7 +53,6 @@ jobs:
 
   deploy:
     executor: my-executor
-    working_directory: ~/surleboutdesdoigts
 
     steps:
       - run:

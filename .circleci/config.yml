@@ -47,10 +47,30 @@ jobs:
           name: compress artifact
           command: |
               tar -zcvf surleboutdesdoigts_v$(cat version).tar.gz public
-              ls -l
+              ls -l surleboutdesdoigts_v$(cat version).tar.gz
+
+  deploy:
+    machine:
+      enabled: true
+    steps:
+      - run:
+          name: stage artifact
+          command: |
+              scp surleboutdesdoigts_v$(cat version).tar.gz $SSH_USER@$SSH_HOST:/tmp
+
+      - run:
+          name: deploy staged artifact
+          command: |
+              ssh $SSH_USER@$SSH_HOST "./deploy_surleboutdesdoigts.sh"
 
 workflows:
   version: 2
-  build:
+  build-and-deploy:
     jobs:
       - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master

@@ -3,12 +3,11 @@ executors:
   vm:
     machine: 
       image: ubuntu-1604:201903-01
+      working_directory: ~/surleboutdesdoigts
     
 jobs:
   build:
     executor: vm
-    working_directory: ~/surleboutdesdoigts
-
     steps:
       - checkout
       
@@ -49,18 +48,24 @@ jobs:
       - run:
           name: compress artifact
           command: |
+              mkdir release
               tar -zcvf surleboutdesdoigts_v$(cat version).tar.gz public
-              ls -l surleboutdesdoigts_v$(cat version).tar.gz
+              mv surleboutdesdoigts_v$(cat version).tar.gz /release
+              cp version release
+              ls -l release
+
+      - persist_to_workspace:
+          root: ~/surleboutdesdoigts
+          paths:
+            - release
 
   deploy:
     executor: vm
-    working_directory: ~/surleboutdesdoigts
-
     steps:
       - run:
           name: stage artifact
           command: |
-              scp surleboutdesdoigts_v$(cat version).tar.gz $SSH_USER@$SSH_HOST:/tmp
+              scp release/surleboutdesdoigts_v$(cat version).tar.gz $SSH_USER@$SSH_HOST:/tmp
 
       - run:
           name: deploy staged artifact

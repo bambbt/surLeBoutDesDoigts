@@ -62,10 +62,13 @@ jobs:
   deploy:
     executor: vm
     steps:
+
+      - attach_workspace:
+          at: ~/surleboutdesdoigts
+          
       - run:
           name: stage artifact
           command: |
-              ls -l
               scp release/surleboutdesdoigts_v$(cat version).tar.gz $SSH_USER@$SSH_HOST:/tmp
 
       - run:

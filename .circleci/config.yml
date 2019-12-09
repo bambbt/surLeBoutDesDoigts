@@ -64,12 +64,12 @@ jobs:
     steps:
 
       - attach_workspace:
-          at: ./
+          at: /tmp
 
       - run:
           name: stage artifact
           command: |
-              scp release/surleboutdesdoigts_v$(cat version).tar.gz $SSH_USER@$SSH_HOST:/tmp
+              scp /tmp/release/surleboutdesdoigts_v$(cat version).tar.gz $SSH_USER@$SSH_HOST:/tmp
 
       - run:
           name: deploy staged artifact

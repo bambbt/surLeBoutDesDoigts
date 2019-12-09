@@ -3,7 +3,7 @@ executors:
   vm:
     machine: 
       image: ubuntu-1604:201903-01
-      working_directory: ~/surleboutdesdoigts
+    working_directory: ~/surleboutdesdoigts
     
 jobs:
   build:
@@ -50,7 +50,7 @@ jobs:
           command: |
               mkdir release
               tar -zcvf surleboutdesdoigts_v$(cat version).tar.gz public
-              mv surleboutdesdoigts_v$(cat version).tar.gz /release
+              mv surleboutdesdoigts_v$(cat version).tar.gz release
               cp version release
               ls -l release
 

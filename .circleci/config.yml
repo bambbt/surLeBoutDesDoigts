@@ -78,7 +78,7 @@ jobs:
       - run:
           name: deploy staged artifact
           command: |
-              ssh -p 9001 leeloo@vps249384.vps.ovh.ca "./publish_surleboutdesdoigts.sh"
+              ssh -p 9001 leeloo@vps249384.vps.ovh.ca "./scripts/publish_surleboutdesdoigts.sh"
 
 workflows:
   version: 2.1

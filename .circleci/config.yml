@@ -49,8 +49,8 @@ jobs:
           name: compress artifact
           command: |
               mkdir release
-              tar -zcvf surleboutdesdoigts_v$(cat version).tar.gz public
-              mv surleboutdesdoigts_v$(cat version).tar.gz release
+              tar -cvf surleboutdesdoigts_v$(cat version).tar public
+              mv surleboutdesdoigts_v$(cat version).tar release
               cp version release
               ls -l release
 
@@ -73,7 +73,7 @@ jobs:
       - run:
           name: stage artifact
           command: |
-              scp -P 9001 /tmp/release/surleboutdesdoigts_v$(cat /tmp/release/version).tar.gz leeloo@vps249384.vps.ovh.ca:/tmp
+              scp -P 9001 /tmp/release/surleboutdesdoigts_v$(cat /tmp/release/version).tar leeloo@vps249384.vps.ovh.ca:/tmp
 
       - run:
           name: deploy staged artifact

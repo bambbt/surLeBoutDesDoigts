@@ -73,7 +73,7 @@ jobs:
       - run:
           name: stage artifact
           command: |
-              ls /tmp/release
+              ls -l /tmp/release
               scp -P 9001 /tmp/release/surleboutdesdoigts_v$(cat /tmp/release/version).tar leeloo@vps249384.vps.ovh.ca:/tmp
 
       - run:

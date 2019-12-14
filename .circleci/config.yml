@@ -73,7 +73,7 @@ jobs:
       - run:
           name: stage artifact
           command: |
-              scp -P 9001 -rp /tmp/release/surleboutdesdoigts_v$(cat /tmp/release/version) leeloo@vps249384.vps.ovh.ca:/tmp
+              scp -P 9001 -rp /tmp/release/surleboutdesdoigts_v$(cat /tmp/release/version) leeloo@vps249384.vps.ovh.ca:~
 
       - run:
           name: deploy staged artifact

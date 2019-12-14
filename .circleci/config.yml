@@ -68,17 +68,17 @@ jobs:
 
       - add_ssh_keys:
           fingerprints:
-            - "8c:0b:bb:ac:66:b1:f1:4f:7d:94:6f:b7:3c:9d:4e:5c"
+            - "3a:fc:da:f7:1c:87:d1:00:ee:b0:22:ef:cb:ee:55:f0"
 
       - run:
           name: stage artifact
           command: |
-              scp -P 9001 /tmp/release/surleboutdesdoigts_v$(cat /tmp/release/version).tar.gz leeloo@vps249384.vps.ovh.ca:/tmp
+              scp -P 9001 /tmp/release/surleboutdesdoigts_v$(cat /tmp/release/version).tar.gz circleci@vps249384.vps.ovh.ca:/tmp
 
       - run:
           name: deploy staged artifact
           command: |
-              ssh -p 9001 leeloo@vps249384.vps.ovh.ca "./publish_surleboutdesdoigts.sh"
+              ssh -p 9001 circleci@vps249384.vps.ovh.ca "./publish_surleboutdesdoigts.sh"
 
 workflows:
   version: 2.1

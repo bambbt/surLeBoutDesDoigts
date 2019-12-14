@@ -73,12 +73,12 @@ jobs:
       - run:
           name: stage artifact
           command: |
-              scp -P 9001 /tmp/release/surleboutdesdoigts_v$(cat /tmp/release/version).tar.gz circleci@vps249384.vps.ovh.ca:/tmp
+              scp -P 9001 /tmp/release/surleboutdesdoigts_v$(cat /tmp/release/version).tar.gz leeloo@vps249384.vps.ovh.ca:/tmp
 
       - run:
           name: deploy staged artifact
           command: |
-              ssh -p 9001 circleci@vps249384.vps.ovh.ca "./publish_surleboutdesdoigts.sh"
+              ssh -p 9001 leeloo@vps249384.vps.ovh.ca "./publish_surleboutdesdoigts.sh"
 
 workflows:
   version: 2.1

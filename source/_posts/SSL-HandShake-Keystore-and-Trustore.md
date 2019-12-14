@@ -55,7 +55,7 @@ Next sections will describe these handshakes.
 
 ## One-way SSL HandShake
 
-![My Handshake SSL Diagram](https://surleboutdesdoigts.me/img/SSL Handshake diagram.png "My SSL Handshake diagram")
+![My Handshake SSL Diagram](https://surleboutdesdoigts.me/img/SSL_Handshake_diagram.png "My SSL Handshake diagram")
 
 > T ( green in the circle ) represents the TrustStore
 > K ( blue in the circle ) represents the KeyStore

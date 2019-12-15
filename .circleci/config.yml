@@ -36,7 +36,7 @@ jobs:
       - run:
           name: install hexo-cli and node modules from package.json
           command: |
-              npm install hexo-cli -g
+              npm install hexo-cli@2.0.0 -g
               npm install
 
       - run: 

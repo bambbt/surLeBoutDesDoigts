@@ -1,5 +1,6 @@
 ---
 title: Hello World
+date: 2019-09-15 22:45:42
 tags: [Hexo]
 categories:
  - [Static site generator,Hexo]

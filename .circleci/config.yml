@@ -42,11 +42,10 @@ jobs:
       - run: 
           name: clean and generate build artifact
           command: |
-              hexo clean
-              hexo generate
+              hexo clean && hexo generate
 
       - run:
-          name: compress artifact
+          name: preparing artifact
           command: |
               mkdir release
               mkdir release/surleboutdesdoigts_v$(cat version)

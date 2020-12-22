@@ -95,6 +95,7 @@ feed:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: Butterfly
+  show_ad_post: true ## set to true (##Adsense)
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

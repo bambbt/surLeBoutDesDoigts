@@ -12,7 +12,7 @@ language: en
 timezone:
 
 ##Adsense
-Show_ad_post: true ## set to true
+show_ad_post: true ## set to true
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -95,6 +95,7 @@ feed:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: Butterfly
+  show_ad_post: true ## set to true (##Adsense)
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

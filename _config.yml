@@ -11,6 +11,9 @@ author: BBT
 language: en
 timezone:
 
+##Adsense
+Show_ad_post: true ## set to true
+
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://SurLeBoutDesDoigts.me/

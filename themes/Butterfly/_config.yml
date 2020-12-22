@@ -442,3 +442,6 @@ post_beautify:
   enable: false
   title-prefix-icon: '\f0c1'
   title-prefix-icon-color: "#F47466"
+
+#Adsense
+show_ad_post: true

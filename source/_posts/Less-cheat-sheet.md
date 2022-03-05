@@ -4,7 +4,7 @@ date: 2022-03-05 14:12:45
 tags : [Terminal, Shell, Cheat sheets]
 categories:
  - [Unix, Command]
-cover : https://surleboutdesdoigts.me/img/less.png
+cover : https://surleboutdesdoigts.me/img/less_command.png
 ---
 
 **less** is a command line utility that displays the contents of a file or a command output, one page at a time. It is similar to **more**, but has more advanced features and allows you to navigate both forward and backward through the file.

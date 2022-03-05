@@ -5,6 +5,9 @@
   "hexo": {
     "version": "3.9.0"
   },
+  "scripts":{
+    "start":"rm -r ./public && hexo generate && hexo server"
+  },
   "dependencies": {
     "clean-css": "^4.2.0",
     "constantinople": "^4.0.0",
@@ -20,7 +23,7 @@
     "hexo-renderer-jade": "^0.4.1",
     "hexo-renderer-markdown-it": "^3.4.1",
     "hexo-renderer-marked": "^2.0.0",
-    "hexo-renderer-stylus": "^0.3.3",
+    "hexo-renderer-stylus": "^2.0.1",
     "hexo-server": "^0.3.3",
     "hexo-wordcount": "^6.0.1",
     "react": "^0.14.0",

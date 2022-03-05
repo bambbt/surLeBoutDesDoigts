@@ -1,7 +1,7 @@
 ---
 title: Self-signed certificate with SAN during COVID-19
 date: 2020-04-29 11:12:34
-tags: [Apache, Server, Client]
+tags : [Apache, Server, Client]
 categories:
  - [SSL, HTTPs]
 cover: https://surleboutdesdoigts.me/img/https_SSL_cover.png
@@ -9,12 +9,12 @@ cover: https://surleboutdesdoigts.me/img/https_SSL_cover.png
 
 Recently, I have been working with Angular 9. I implemented an app shell for a project of mine. And, well, I needed my app to be secured in order to use Push notifications with service workers.
 
-So, I created a self signed certificate, using a simple command. I answered the questions the system asked me. 
-And my certificate got generated. But, it was not working on chrome because of the Common Name is not used anymore. I tried on firefox and it was. 
+So, I created a self signed certificate, using a simple command. I answered the questions the system asked me.
+And my certificate got generated. But, it was not working on chrome because of the Common Name is not used anymore. I tried on firefox and it was.
 
 So after some little research on the internet, I found some answers and decided to put everything here for anyone who would be needed to do this.
 
-This article as been written for any kind of people, so if you have never did this before do no worry. Stay right here! 
+This article as been written for any kind of people, so if you have never did this before do no worry. Stay right here!
 Everything is explained in the article.
 
 # Pre-requisite

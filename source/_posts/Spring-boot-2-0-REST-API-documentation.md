@@ -33,12 +33,15 @@ developer and new joiners everyday and we are grateful for all the work you do.
 - [Manage Spring profiles](https://www.baeldung.com/spring-profiles)
 - [Manage maven profiles](https://www.baeldung.com/maven-profiles)
 
-# JPA Entities, JPA pagination, Insertion batches
+# JPA Entities, JPA pagination, Insertion batches, Pessimistic and Optimistic Lock
 - [JPA Entities](https://www.baeldung.com/jpa-entities)
 - [JPA pagination](https://www.baeldung.com/spring-data-jpa-pagination-sorting)
 - [Insertion batches](https://dzone.com/articles/spring-boot-boost-jpa-bulk-insert-performance-by-100x)
 - [HikariCP in Spring boot](https://www.baeldung.com/spring-boot-hikari)
 - [HikariCP configuration](https://github.com/brettwooldridge/HikariCP#gear-configuration-knobs-baby)
+- [Testing Optimistic Locking Handling with Spring Boot and JPA](https://blog.mimacom.com/testing-optimistic-locking-handling-spring-boot-jpa/)
+- [Optimistic Locking in JPA](https://www.baeldung.com/jpa-optimistic-locking)
+- [Enabling Transaction Locks in Spring Data JPA](https://www.baeldung.com/java-jpa-transaction-locks)
 
 # Testing
 - [Spring boot testing with JUnit](https://www.baeldung.com/spring-boot-testing)

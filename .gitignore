@@ -1,4 +1,5 @@
 node_modules/
 public/
 db.json
-
+source/.DS_Store
+source/img/.DS_Store

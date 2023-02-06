@@ -2,7 +2,7 @@ version: 2.1
 executors:
   vm:
     machine: 
-      image: ubuntu-1604:201903-01
+      image: ubuntu-2204:2022.10.2
     working_directory: ~/surleboutdesdoigts
     
 jobs:
